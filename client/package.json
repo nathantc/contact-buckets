@@ -8,5 +8,12 @@
   },
   "repository": "",
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jasmine": "~0.5.1"
+  },
+  "devDependencies": {
+    "grunt-template-jasmine-requirejs": "~0.1.3"
+  }
 }

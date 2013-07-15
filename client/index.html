@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
     <![endif]-->
 </head>
-<body>
-    <div class="container">
-        Contacts:
-        <div class="span16" data-ng-repeat>
-            This is our app
-        </div>
+<body data-ng-app="contactBucket">
+    <div class="container" data-ng-controller="contactController">
+        <button>New</button>
+        <ul>
+            <li data-ng-repeat="contact in contacts">
+                {{ contact.name }}
+                <button>Edit</button>
+                <button>Delete</button>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
