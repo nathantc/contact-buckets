@@ -1,6 +1,6 @@
 describe('App', function() {
 
-    it('should work', function() {
+    it('Your tests go here', function() {
         expect(1).toBe(1);
     });
 });
