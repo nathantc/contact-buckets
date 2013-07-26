@@ -38,6 +38,21 @@
     color: white;
     text-decoration: none;    
 }
+
+.box { 
+    .box-shadow(2px);
+    
+    border-left: 1px solid lightgray;
+    border-top: 1px solid lightgray;   
+}
+
+.view-box {
+    padding: 15px;
+    margin: 10px;
+    
+    .rounded-corners(5px);
+    .box;
+}
 /* End Form Mixins and Functions  */
 
 /* Form */
@@ -73,25 +88,16 @@ body {
     }
     
     section#view {
-        #contact-table {
-            padding: 15px;
-            margin: 10px;
-            
-            border-left: 1px solid lightgray;
-            border-top: 1px solid lightgray;
-            
-            .rounded-corners(5px);
-            .box-shadow(2px);
+        .view-box;
+        
+        #contact-table {        
             
             h1 {
                 text-align: center;   
             }
             
             table {
-                .box-shadow(2px);
-                
-                border-left: 1px solid lightgray;
-                border-top: 1px solid lightgray;
+                .box;
                 
                 th {
                     text-align: center;   
@@ -108,6 +114,27 @@ body {
                 }
     
             }   
+        }
+        
+        #contact-edit-form {
+            
+            h1 {
+                text-align: center;   
+            }
+            
+            form {
+                padding: 10px;
+                
+                .box;
+                
+                label {
+                    display: block;   
+                }   
+                
+                #submit {
+                    display: block;   
+                }
+            }
         }
     }
 

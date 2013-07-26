@@ -2,15 +2,62 @@
 <html>
 <head>
     <title>Contact Buckets</title>
-    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="../css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="../css/blueprint/print.css" type="text/css" media="print">
     <!--[if lt IE 8]>
-    <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="../css/blueprint/ie.css" type="text/css" media="screen, projection">
     <![endif]-->
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, projection">
 </head>
 <body>
-<div class="container">
+    <header>
+        <nav>
+            <span class="nav-head"> <> </span>
+            <a href="#contacts">
+                <span>Contacts</span>
+            </a>
+            <a href="#edit">
+                <span>Add Contact</span>
+            </a>
+            <span class="nav-book-end"></span>
+        </nav>
+    </header>
+    
+    <section id="view">
+        <div id="contact-edit-form">
+            <h1>Contact Edit</h1>
+            <form>
+                <label for="avatar">Avatar:</label>
+                <input name="avatar" type="url"/>
+                
+                <label for="first-name" required>First Name:</label>
+                <input name="first-name" type="text"/>
+                
+                <label for="last-name">Last Name:</label>
+                <input name="last-name" type="text"/>
+                
+                <label for="group">Group:</label>                    
+                <select name="group">
+                    <option></option>
+                    <option>Group One</option>
+                    <option>Group Two</option>
+                    <option>Group Three</option>
+                </select>
+                    
+                <label for="phone">Phone:</label>
+                <input name="phone" type="text"/>
+
+                <label for="email">E-mail:</label>
+                <input name="email" type="email"/>
+                
+                <input id="submit" type="submit"/>
+            </form>
+        </div>
+    </section>
+    
+    <footer>    
+    </footer>   
+<!--<div class="container">
     <div>
         <table>
             <tr>
@@ -52,6 +99,6 @@
                 width="80"
                 height="80">
     </div>
-</div>
+</div> -->
 </body>
 </html>
