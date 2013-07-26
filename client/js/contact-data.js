@@ -3,7 +3,25 @@
     var module = angular.module('ContactDataModule', []);
 
     module.service('ContactDataService', function() {
-        var contacts = [];
+        var contacts = [
+            {
+                id: 1,
+                firstName: 'Joe',
+                lastName: 'Ross',
+                phone: '555.123.4455',
+                email: 'joe@awesome.com',
+                group: 'Awesome',
+                avatarUrl: 'http://awesome-avatar/joe'
+            },
+            {
+                id: 2,
+                firstName: 'Nate',
+                lastName: 'Carver',
+                phone: '555.123.6677',
+                email: 'nate@awesome.com',
+                group: 'Awesome',
+                avatarUrl: 'http://awesome-avatar/nate'
+            }];
 
         this.init = function(data) {
             contacts = data;

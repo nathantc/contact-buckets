@@ -1,0 +1,38 @@
+<div id="contact-table">
+    <h1>Contacts</h1>
+    <table>
+        <tr>
+            <th>Actions</th>
+            <th>Name</th>
+            <th>Group</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="name-filter" type="text"/>
+            </td>
+            <td>
+                <input id="group-filter" type="text"/>
+            </td>
+            <td>
+                <input id="phone-filter" type="text"/>
+            </td>
+            <td>
+                <input id="email-filter" type="text"/>
+            </td>
+        </tr>
+        <tr data-ng-repeat="contact in contacts">
+            <td>
+                <a href="#/add">Add</a>
+                <a href="#/edit/{{ contact.id }}">Edit</a>
+                <span data-ng-click="delete(contact.id)">X</span>
+            </td>
+            <td>{{ contact.firstName }} {{ contact.lastName }}</td>
+            <td>{{ contact.group }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.email }}</td>
+        </tr>
+    </table>
+</div>
