@@ -1,0 +1,120 @@
+/* Color */
+@backgroundTranslucentGray: rgba(255, 255, 255, .1);
+
+.background-black-gradient {
+    background: #7d7e7d;
+    background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e));
+    background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%);    
+}
+/* End Color */
+
+
+/* Form Mixins and Functions */
+.rounded-corners(@size) {
+    -moz-border-radius: @size;
+    -webkit-border-radius: @size;
+    border-radius: $size;
+}
+
+.box-shadow(@size) { 
+	-webkit-box-shadow: @size @size @size rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: @size @size @size rgba(50, 50, 50, 0.75);
+	box-shadow: @size @size @size rgba(50, 50, 50, 0.75);
+}
+
+.nav-form {
+    float: left;
+    height: 40px;
+    width: 150px;
+    
+    text-align: center;
+    line-height: 2;
+    font-size: 16px;
+
+    margin-right:1px;
+    
+    background-color: @backgroundTranslucentGray;
+    color: white;
+    text-decoration: none;    
+}
+/* End Form Mixins and Functions  */
+
+/* Form */
+body {
+ 
+    header {
+        height: 40px;
+        .background-black-gradient;
+        
+        nav {
+            
+            .nav-head {
+                .nav-form;
+                width: 75px;
+            }
+            
+            .nav-book-end {
+                .nav-form;
+                width: calc(100% ~'-' 379px);
+            }
+            
+            a {
+                .nav-form;
+                
+                &:hover {
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+            
+        }
+        
+    }
+    
+    section#view {
+        #contact-table {
+            padding: 15px;
+            margin: 10px;
+            
+            border-left: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+            
+            .rounded-corners(5px);
+            .box-shadow(2px);
+            
+            h1 {
+                text-align: center;   
+            }
+            
+            table {
+                .box-shadow(2px);
+                
+                border-left: 1px solid lightgray;
+                border-top: 1px solid lightgray;
+                
+                th {
+                    text-align: center;   
+                    border-bottom: 1px solid lightgray;   
+                    
+                }
+                
+                td {
+                    border-right: 1px solid lightgray;   
+                    
+                    input {
+                        width: 100%   
+                    }
+                }
+    
+            }   
+        }
+    }
+
+    footer {
+        
+        
+    }
+    
+}
+/* End Form */
